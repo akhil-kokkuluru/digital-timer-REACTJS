@@ -1,5 +1,5 @@
 .totalBG {
-  background-image: linear-gradient(to bottom, #ffffff, #cffcf1);
+  background-image: linear-gradient(to bottom, #ffffff, #defafe, #cffcf1);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -43,4 +43,43 @@
   justify-content: center;
   align-items: center;
   align-self: center;
+}
+.playPausecss {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.buttonCss {
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 0px;
+  cursor: pointer;
+  width: 100px;
+}
+.playcss {
+  width: 30px;
+}
+.buttonText {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 3px;
+}
+.controllersContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timerPhrase {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 20px;
 }
