@@ -76,10 +76,55 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+}
+.timerControllerContainer {
+  display: flex;
+  flex-direction: column;
 }
 .timerPhrase {
   font-family: 'Roboto';
   font-weight: bold;
   font-size: 20px;
+}
+.plusMinusButton {
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: bold;
+  border: 0px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.timerValue {
+  font-size: 25px;
+  font-family: 'Roboto';
+  background-image: linear-gradient(to right, #08f761, #00d9f5);
+  width: 70px;
+  height: 40px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.timeAdjustContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .timerControllerContainer {
+    flex-direction: row;
+  }
+  .timerContainer {
+    width: 450px;
+    height: 250px;
+  }
+  .controllersContainer {
+    width: 80%;
+  }
 }
