@@ -60,6 +60,7 @@
   border: 0px;
   cursor: pointer;
   width: 100px;
+  outline: none;
 }
 .playcss {
   width: 30px;
@@ -95,6 +96,7 @@
   border: 0px;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
 }
 .timerValue {
   font-size: 25px;
