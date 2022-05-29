@@ -1,13 +1,24 @@
 import './index.css'
 import {Component} from 'react'
 
-const initialState = {runningStatus: false, timerMinutes: 25, timerSeconds: 0}
+const initialState = {
+  runningStatus: false,
+  timerMinutes: 25,
+  timerSeconds: 0,
+  seconds: 60,
+}
 
 class DigitalTimer extends Component {
   state = initialState
 
+  interId = setInterval(this.intttiti, 1000)
+
   componentWillUnmount() {
     this.clearTimeInterval()
+  }
+
+  intttiti = () => {
+    this.setState(pre => ({seconds: pre.seconds - 1}))
   }
 
   clearTimeInterval = () => clearInterval(this.intervalId)
@@ -40,6 +51,16 @@ class DigitalTimer extends Component {
         timerSeconds: prevValue.timerSeconds + 1,
       }))
     }
+  }
+
+  secIncreemnt = () => {
+    this.setState(prevValue => ({
+      seconds: prevValue.seconds - 1,
+    }))
+  }
+
+  ontriggring = () => {
+    this.secIntervalId = setInterval(this.secIncreemnt, 1000)
   }
 
   onclickingStartPauseButton = () => {
@@ -98,11 +119,12 @@ class DigitalTimer extends Component {
 
   render() {
     const {stringMins, stringSecs} = this.timerRunningText()
-    const {timerMinutes, runningStatus} = this.state
+    const {timerMinutes, runningStatus, timerSeconds, seconds} = this.state
     const textTimer = runningStatus ? 'Running' : 'Paused'
     return (
       <div className="totalBG">
         <h1>Digital Timer</h1>
+        <p>{seconds}</p>
         <div className="timerControllerContainer">
           <div className="timerContainer">
             <div className="timeContainer">
